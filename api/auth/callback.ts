@@ -69,4 +69,10 @@ export default async function handler(
       error: 'OAuth request failed.'
     });
   }
+  return res.status(200).send(`
+  <h1>Shopify authorization successful</h1>
+  <p>Copy the access token below and add it to Vercel.</p>
+  <p><strong>Do not share this token.</strong></p>
+  <textarea style="width:100%;height:100px;">${data.access_token}</textarea>
+`);
 }
