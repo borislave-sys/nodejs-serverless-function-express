@@ -50,29 +50,9 @@ export default async function handler(
       });
     }
 
-    /*
-     * TEMPORARY:
-     * We will use this response to confirm authentication works.
-     *
-     * Do NOT display the token in production.
-     */
-    return res.status(200).json({
-      success: true,
-      message:
-        'Shopify authorization successful. Access token obtained.'
-    });
-
-  } catch (error) {
-    console.error(error);
-
-    return res.status(500).json({
-      error: 'OAuth request failed.'
-    });
-  }
-  return res.status(200).send(`
+return res.status(200).send(`
   <h1>Shopify authorization successful</h1>
   <p>Copy the access token below and add it to Vercel.</p>
   <p><strong>Do not share this token.</strong></p>
   <textarea style="width:100%;height:100px;">${data.access_token}</textarea>
 `);
-}
