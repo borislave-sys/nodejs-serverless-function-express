@@ -1,4 +1,3 @@
-```typescript
 import type { VercelRequest, VercelResponse } from '@vercel/node';
 
 const SHOPIFY_API_VERSION = '2026-07';
@@ -126,4 +125,3 @@ export default async function handler(
     });
   }
 }
-```
