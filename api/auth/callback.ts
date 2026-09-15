@@ -56,3 +56,4 @@ return res.status(200).send(`
   <p><strong>Do not share this token.</strong></p>
   <textarea style="width:100%;height:100px;">${data.access_token}</textarea>
 `);
+  }
